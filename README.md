@@ -8,7 +8,7 @@ displaying an alert or a confirmation dialog is just as easy as calling a functi
 ```javascript
 import {alert} from 'react-bootstrap-confirmation';
 
-await alert('Something very wrong is happening!');
+alert('Something very wrong happened!');
 ```
 
 [See the demo here](https://nicolas-van.github.io/react-bootstrap-confirmation/).
