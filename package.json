@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-confirmation",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "description": "A library to easily display alerts and confirmations using React and Bootstrap",
   "keywords": ["react", "bootstrap", "alert", "confirm", "prompt"],
   "main": "dist/bundle.js",
