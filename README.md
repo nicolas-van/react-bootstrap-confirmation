@@ -21,6 +21,8 @@ const AlertButton = () => {
 };
 ```
 
+[See the demo here](https://nicolas-van.github.io/react-bootstrap-confirmation/).
+
 ## Installation
 
 ```bash
