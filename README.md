@@ -6,19 +6,9 @@ A library to easily display alerts and confirmations using React and Bootstrap. 
 displaying an alert or a confirmation dialog is just as easy as calling a function:
 
 ```javascript
-import React, {useState} from 'react';
 import {alert} from 'react-bootstrap-confirmation';
 
-const AlertButton = () => {
-  const display = async () => {
-    await alert('Something very wrong is happening!');
-  };
-  return (
-    <button type="button" className="btn btn-primary" onClick={display}>
-      Display alert
-    </button>
-  );
-};
+await alert('Something very wrong is happening!');
 ```
 
 [See the demo here](https://nicolas-van.github.io/react-bootstrap-confirmation/).
