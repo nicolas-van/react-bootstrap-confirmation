@@ -1,52 +1,43 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import confirm from '../dist/bundle';
+import {confirm} from '../dist/bundle';
 
-ReactDOM.render(
-    <ExampleConfirmModal/>,
-    document.querySelector('#app'),
-);
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
-/**
- * Do stuff
- * @param {*} confirmButtonStyle the style
- */
-function displayModal(confirmButtonStyle) {
-  confirm('Are you sure ?', {
-    title: 'Confirm',
-    confirmText: 'Delete',
-    closeText: 'Cancel',
-    confirmButtonStyle,
-  }).then(
-      () => {
-        alert('onConfirm callback');
-      },
-      () => {
-        alert('onCancel callback');
-      },
-  );
-}
-
-/**
- * Example
- * @return {*} stuff
- */
-function ExampleConfirmModal() {
+const Example = () => {
   return (
     <div className="container">
-      <h1>Examples</h1>
+      <h1>react-bootstrap-confirmation demo</h1>
       <p>
-        <button type="button" className="btn btn-primary" onClick={() => displayModal('danger')}>
-          Display Confirm Modal red style
-        </button>
+        This is a demonstration of the{' '}
+        <a href="https://github.com/nicolas-van/react-bootstrap-confirmation">react-bootstrap-confirmation</a>
+        {' '}
+        library, a library to easily display alerts and confirmations using React and Bootstrap.
       </p>
-      <p>
-        <button type="button" className="btn btn-primary" onClick={() => displayModal('primary')}>
-          Display Confirm Modal blue style
-        </button>
-      </p>
+      <ExampleConfirmModal/>
     </div>
   );
+};
+
+const ExampleConfirmModal = () => {
+  const [result, setResult] = useState();
+  const displayConfirm = async () => {
+    setResult(await confirm('Are you sure?'));
+  };
+  return <div>
+    <p>
+      <button type="button" className="btn btn-primary" onClick={displayConfirm}>
+        Display confirm modal
+      </button>
+    </p>
+    {result !== undefined ? <p>Result: {JSON.stringify(result)}</p> : undefined}
+  </div>;
 }
+
+ReactDOM.render(
+    <Example/>,
+    document.querySelector('#app'),
+);
