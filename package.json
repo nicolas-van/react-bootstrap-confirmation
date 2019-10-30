@@ -10,8 +10,8 @@
     "lint": "eslint \"src/**/*.js\" \"demo/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "test": "npm run lint && npm run coverage",
-    "demo-dev": "parcel demo/index.html -d docs --no-autoinstall",
-    "demo": "parcel build demo/index.html -d docs --no-autoinstall",
+    "demo-dev": "parcel demo/index.html -d docs",
+    "demo": "parcel build demo/index.html -d docs",
     "rollup": "rollup -c"
   },
   "author": "",
@@ -36,6 +36,7 @@
     "rollup": "^1.26.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "sass": "^1.23.1"
+    "sass": "^1.23.1",
+    "svgo": "^1.3.0"
   }
 }
