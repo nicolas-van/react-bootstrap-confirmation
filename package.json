@@ -1,0 +1,33 @@
+{
+  "name": "react-bootstrap-confirmation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run demo",
+    "jest": "jest",
+    "coverage": "jest --coverage",
+    "lint": "eslint \"src/**/*.js\" \"demo/**/*.js\"",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "npm run lint && npm run coverage",
+    "demo-dev": "parcel demo/index.html -d docs",
+    "demo": "parcel build demo/index.html -d docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-confirm": "^0.1.18"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "eslint": "^6.6.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.16.0",
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.4",
+    "react-dom": "^16.11.0",
+    "sass": "^1.23.1"
+  }
+}
