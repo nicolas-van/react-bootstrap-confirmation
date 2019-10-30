@@ -29,6 +29,7 @@ class Confirmation extends React.PureComponent {
         backdrop="static"
         keyboard={this.props.enableEscape}
         onKeyDown={(event) => this.handleKeyDown(event)}
+        centered
       >
         <Modal.Header>
           <Modal.Title>{this.props.title}</Modal.Title>

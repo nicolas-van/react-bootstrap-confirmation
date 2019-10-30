@@ -10,8 +10,8 @@
     "lint": "eslint \"src/**/*.js\" \"demo/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "test": "npm run lint && npm run coverage",
-    "demo-dev": "parcel demo/index.html -d docs",
-    "demo": "parcel build demo/index.html -d docs",
+    "demo-dev": "parcel demo/index.html -d docs --no-autoinstall",
+    "demo": "parcel build demo/index.html --public-url ./ -d docs --no-autoinstall",
     "rollup": "rollup -c"
   },
   "author": "",
