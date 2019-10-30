@@ -90,5 +90,5 @@ const ConfirmButton = () => {
 | `title` | `string` | A facultative title to use for the modal. | `undefined` |
 | `okText` | `string` | The text of the "OK" button | `"OK"` |
 | `okButtonStyle` | `string` | The style of the "OK" button. Must correspond to one of the 6 button styles of Bootstrap. | `"primary"` |
-| `cancelText` | `string` | The text of the "Cancel" button | `"OK"` |
+| `cancelText` | `string` | The text of the "Cancel" button | `"Cancel"` |
 | `cancelButtonStyle` | `string` | The style of the "Cancel" button. Must correspond to one of the 6 button styles of Bootstrap. | `"secondary"` |
