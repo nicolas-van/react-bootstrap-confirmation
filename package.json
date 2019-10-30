@@ -1,8 +1,15 @@
 {
   "name": "react-bootstrap-confirmation",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A library to easily display alerts and confirmations using React and Bootstrap",
-  "keywords": ["react", "bootstrap", "alert", "confirm", "prompt", "dialog"],
+  "keywords": [
+    "react",
+    "bootstrap",
+    "alert",
+    "confirm",
+    "prompt",
+    "dialog"
+  ],
   "main": "dist/bundle.js",
   "scripts": {
     "build": "npm run rollup && npm run demo",
@@ -18,10 +25,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "react-confirm": "^0.1.18"
+  },
+  "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
-    "react-bootstrap": "^1.0.0-beta.14",
-    "react-confirm": "^0.1.18"
+    "react-bootstrap": "^1.0.0-beta.14"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -38,6 +47,9 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-node-resolve": "^5.2.0",
     "sass": "^1.23.1",
-    "svgo": "^1.3.0"
+    "svgo": "^1.3.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-bootstrap": "^1.0.0-beta.14"
   }
 }
