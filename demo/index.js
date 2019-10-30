@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import {confirm} from '../dist/bundle';
+import {confirm, alert} from '../dist/bundle';
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
@@ -17,6 +17,7 @@ const Example = () => {
         {' '}
         library, a library to easily display alerts and confirmations using React and Bootstrap.
       </p>
+      <ExampleAlert/>
       <ExampleConfirmModal/>
     </div>
   );
@@ -35,6 +36,24 @@ const ExampleConfirmModal = () => {
         </button>
       </p>
       {result !== undefined ? <p>Result: {JSON.stringify(result)}</p> : undefined}
+    </div>
+  </div>;
+};
+
+const ExampleAlert = () => {
+  const [result, setResult] = useState();
+  const display = async () => {
+    await alert('Something is happening!');
+    setResult(true);
+  };
+  return <div className="card">
+    <div className="card-body">
+      <p>
+        <button type="button" className="btn btn-primary" onClick={display}>
+          Display alert
+        </button>
+      </p>
+      {result !== undefined ? <p>Alert was displayed</p> : undefined}
     </div>
   </div>;
 };
