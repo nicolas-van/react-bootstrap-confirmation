@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {Modal, Button} from 'react-bootstrap';
 import {confirmable, createConfirmation} from 'react-confirm';
@@ -6,7 +6,7 @@ import {confirmable, createConfirmation} from 'react-confirm';
 /**
  * A base confirmation class.
  */
-class Confirmation extends Component {
+class Confirmation extends React.PureComponent {
   /**
    * Handles key down.
    * @param {*} event The event.
