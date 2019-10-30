@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-confirmation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library to easily display alerts and confirmations using React and Bootstrap",
   "keywords": [
     "react",
@@ -31,7 +31,7 @@
     "rollup": "rollup -c"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "react-confirm": "^0.1.18"
   },
