@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run demo",
+    "build": "npm run rollup && npm run demo",
     "jest": "jest",
     "coverage": "jest --coverage",
     "lint": "eslint \"src/**/*.js\" \"demo/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "test": "npm run lint && npm run coverage",
-    "demo-dev": "parcel demo/index.html -d docs",
-    "demo": "parcel build demo/index.html -d docs"
+    "demo-dev": "parcel demo/index.html -d docs --no-autoinstall",
+    "demo": "parcel build demo/index.html -d docs --no-autoinstall",
+    "rollup": "rollup -c"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,9 @@
     "react-confirm": "^0.1.18"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
     "bootstrap": "^4.3.1",
     "eslint": "^6.6.0",
     "eslint-config-google": "^0.14.0",
@@ -29,6 +33,9 @@
     "jest": "^24.9.0",
     "parcel-bundler": "^1.12.4",
     "react-dom": "^16.11.0",
+    "rollup": "^1.26.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "sass": "^1.23.1"
   }
 }

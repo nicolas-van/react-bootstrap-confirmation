@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import confirm from '../src';
+import confirm from '../dist/bundle';
 
 ReactDOM.render(
     <ExampleConfirmModal/>,
