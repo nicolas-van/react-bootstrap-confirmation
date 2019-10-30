@@ -55,7 +55,7 @@ const AlertButton = () => {
 #### Options
 
 | Parameter name | Type | Description | Default |
-| - | - | - |
+| -------------- | ---- | ----------- | ------- |
 | `title` | `string` | A facultative title to use for the modal. | `undefined` |
 | `okText` | `string` | The text of the "OK" button | `"OK"` |
 | `okButtonStyle` | `string` | The style of the "OK" button. Must correspond to one of the 6 button styles of Bootstrap. | `"primary"` |
@@ -86,7 +86,7 @@ const ConfirmButton = () => {
 #### Options
 
 | Parameter name | Type | Description | Default |
-| - | - | - |
+| -------------- | ---- | ----------- | ------- |
 | `title` | `string` | A facultative title to use for the modal. | `undefined` |
 | `okText` | `string` | The text of the "OK" button | `"OK"` |
 | `okButtonStyle` | `string` | The style of the "OK" button. Must correspond to one of the 6 button styles of Bootstrap. | `"primary"` |
