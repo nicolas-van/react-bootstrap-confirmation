@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run rollup && npm run demo",
-    "jest": "jest",
+    "jest": "echo \"no tests yet\"",
     "coverage": "jest --coverage",
     "lint": "eslint \"src/**/*.js\" \"demo/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
