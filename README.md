@@ -3,7 +3,7 @@
 [![](https://github.com/nicolas-van/react-bootstrap-confirmation/workflows/Node%20CI/badge.svg)](https://github.com/nicolas-van/react-bootstrap-confirmation/actions) [![npm version](https://img.shields.io/npm/v/react-bootstrap-confirmation.svg)](https://www.npmjs.com/package/react-bootstrap-confirmation)
 
 A library to easily display alerts and confirmations using React and Bootstrap. With react-bootstrap-confirmation
-display an alert or a confirmation dialog is just as easy as calling a function:
+displaying an alert or a confirmation dialog is just as easy as calling a function:
 
 ```javascript
 import React, {useState} from 'react';
