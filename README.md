@@ -31,6 +31,8 @@ npm install --save react-bootstrap-confirmation
 
 ### `alert(message[, options])`
 
+An asynchronous function that will return once the alert has been dismissed.
+
 #### Example
 
 ```javascript
@@ -50,7 +52,17 @@ const AlertButton = () => {
 };
 ```
 
+#### Options
+
+| Parameter name | Type | Description | Default |
+| - | - | - |
+| `title` | `string` | A facultative title to use for the modal. | `undefined` |
+| `okText` | `string` | The text of the "OK" button | `"OK"` |
+| `okButtonStyle` | `string` | The style of the "OK" button. Must correspond to one of the 6 button styles of Bootstrap. | `"primary"` |
+
 ### `confirm(message[, options])`
+
+An asynchronous function that will return `true` if the user clicks the "OK" button and `false` in the other cases.
 
 #### Example
 
@@ -70,3 +82,13 @@ const ConfirmButton = () => {
   );
 };
 ```
+
+#### Options
+
+| Parameter name | Type | Description | Default |
+| - | - | - |
+| `title` | `string` | A facultative title to use for the modal. | `undefined` |
+| `okText` | `string` | The text of the "OK" button | `"OK"` |
+| `okButtonStyle` | `string` | The style of the "OK" button. Must correspond to one of the 6 button styles of Bootstrap. | `"primary"` |
+| `cancelText` | `string` | The text of the "Cancel" button | `"OK"` |
+| `cancelButtonStyle` | `string` | The style of the "Cancel" button. Must correspond to one of the 6 button styles of Bootstrap. | `"secondary"` |

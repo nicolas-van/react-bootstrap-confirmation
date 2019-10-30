@@ -4,7 +4,7 @@ import {Modal, Button} from 'react-bootstrap';
 import {confirmable, createConfirmation} from 'react-confirm';
 
 const Confirmation = ({show, proceed, dismiss, cancel, confirmation, title,
-  confirmText, closeText, confirmButtonStyle, ...options}) => {
+  okText, cancelText, okButtonStyle, ...options}) => {
   const header = title ? (
     <Modal.Header>
       <Modal.Title>{title}</Modal.Title>
@@ -22,13 +22,13 @@ const Confirmation = ({show, proceed, dismiss, cancel, confirmation, title,
       <Modal.Body>{confirmation}</Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={() => proceed(false)}>
-          {closeText}
+          {cancelText}
         </Button>
         <Button
-          variant={confirmButtonStyle}
+          variant={okButtonStyle}
           onClick={() => proceed(true)}
         >
-          {confirmText}
+          {okText}
         </Button>
       </Modal.Footer>
     </Modal>
@@ -39,21 +39,23 @@ Confirmation.propTypes = {
   /** header title */
   title: PropTypes.string,
   confirmation: PropTypes.string, // arguments of your confirm function
-  confirmText: PropTypes.string,
-  closeText: PropTypes.string,
-  confirmButtonStyle: PropTypes.oneOf(['primary', 'success', 'danger', 'warning', 'info', 'default']),
-  show: PropTypes.bool, // from confirmable. indicates if the dialog is shown or not.
-  proceed: PropTypes.func, // from confirmable. call to close the dialog with promise resolved.
-  cancel: PropTypes.func, // from confirmable. call to close the dialog with promise rejected.
-  dismiss: PropTypes.func,
+  okText: PropTypes.string,
+  cancelText: PropTypes.string,
+  okButtonStyle: PropTypes.oneOf(['primary', 'success', 'danger', 'warning', 'info', 'default']),
+  cancelButtonStyle: PropTypes.oneOf(['primary', 'success', 'danger', 'warning', 'info', 'default']),
+  show: PropTypes.bool, // from confirmable.
+  proceed: PropTypes.func, // from confirmable.
+  cancel: PropTypes.func, // from confirmable.
+  dismiss: PropTypes.func, // from confirmable.
 };
 
 Confirmation.defaultProps = {
   title: undefined,
   confirmation: undefined,
-  confirmText: 'OK',
-  closeText: 'Cancel',
-  confirmButtonStyle: 'primary',
+  okText: 'OK',
+  cancelText: 'Cancel',
+  okButtonStyle: 'primary',
+  cancelButtonStyle: 'secondary',
   show: undefined,
   proceed: undefined,
   cancel: undefined,
@@ -68,7 +70,7 @@ export const confirm = (message, options = {}) => {
 
 
 const Alert = ({show, proceed, dismiss, cancel, confirmation, title,
-  confirmText, confirmButtonStyle, ...options}) => {
+  okText, okButtonStyle, ...options}) => {
   const header = title ? (
     <Modal.Header>
       <Modal.Title>{title}</Modal.Title>
@@ -87,10 +89,10 @@ const Alert = ({show, proceed, dismiss, cancel, confirmation, title,
       <Modal.Body>{confirmation}</Modal.Body>
       <Modal.Footer>
         <Button
-          variant={confirmButtonStyle}
+          variant={okButtonStyle}
           onClick={() => proceed()}
         >
-          {confirmText}
+          {okText}
         </Button>
       </Modal.Footer>
     </Modal>
@@ -101,20 +103,19 @@ Alert.propTypes = {
   /** header title */
   title: PropTypes.string,
   confirmation: PropTypes.string, // arguments of your confirm function
-  confirmText: PropTypes.string,
-  closeText: PropTypes.string,
-  confirmButtonStyle: PropTypes.oneOf(['primary', 'success', 'danger', 'warning', 'info', 'default']),
-  show: PropTypes.bool, // from confirmable. indicates if the dialog is shown or not.
-  proceed: PropTypes.func, // from confirmable. call to close the dialog with promise resolved.
-  cancel: PropTypes.func, // from confirmable. call to close the dialog with promise rejected.
-  dismiss: PropTypes.func,
+  okText: PropTypes.string,
+  okButtonStyle: PropTypes.oneOf(['primary', 'success', 'danger', 'warning', 'info', 'default']),
+  show: PropTypes.bool, // from confirmable.
+  proceed: PropTypes.func, // from confirmable.
+  cancel: PropTypes.func, // from confirmable.
+  dismiss: PropTypes.func, // from confirmable.
 };
 
 Alert.defaultProps = {
   title: undefined,
   confirmation: undefined,
-  confirmText: 'OK',
-  confirmButtonStyle: 'primary',
+  okText: 'OK',
+  okButtonStyle: 'primary',
   show: undefined,
   proceed: undefined,
   cancel: undefined,
