@@ -37,7 +37,7 @@ const ExampleConfirmModal = () => {
       {result !== undefined ? <p>Result: {JSON.stringify(result)}</p> : undefined}
     </div>
   </div>;
-}
+};
 
 ReactDOM.render(
     <Example/>,
