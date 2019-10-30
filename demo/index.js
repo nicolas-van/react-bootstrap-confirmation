@@ -27,13 +27,15 @@ const ExampleConfirmModal = () => {
   const displayConfirm = async () => {
     setResult(await confirm('Are you sure?'));
   };
-  return <div>
-    <p>
-      <button type="button" className="btn btn-primary" onClick={displayConfirm}>
-        Display confirm modal
-      </button>
-    </p>
-    {result !== undefined ? <p>Result: {JSON.stringify(result)}</p> : undefined}
+  return <div className="card">
+    <div className="card-body">
+      <p>
+        <button type="button" className="btn btn-primary" onClick={displayConfirm}>
+          Display confirm modal
+        </button>
+      </p>
+      {result !== undefined ? <p>Result: {JSON.stringify(result)}</p> : undefined}
+    </div>
   </div>;
 }
 
