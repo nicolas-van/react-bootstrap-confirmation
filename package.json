@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run rollup && npm run demo",
     "jest": "echo \"no tests yet\"",
-    "coverage": "jest --coverage",
+    "coverage": "echo \"no tests yet\"",
     "lint": "eslint \"src/**/*.js\" \"demo/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "test": "npm run lint && npm run coverage",
