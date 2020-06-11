@@ -21,7 +21,10 @@ const Confirmation = ({show, proceed, dismiss, cancel, confirmation, title,
       {header}
       <Modal.Body>{confirmation}</Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={() => proceed(false)}>
+        <Button 
+          variant={cancelButtonStyle}
+          onClick={() => proceed(false)}
+        >
           {cancelText}
         </Button>
         <Button
