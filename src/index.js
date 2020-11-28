@@ -21,7 +21,7 @@ const Confirmation = ({show, proceed, dismiss, cancel, confirmation, title,
       {header}
       <Modal.Body>{confirmation}</Modal.Body>
       <Modal.Footer>
-        <Button 
+        <Button
           variant={cancelButtonStyle}
           onClick={() => proceed(false)}
         >
@@ -44,8 +44,10 @@ Confirmation.propTypes = {
   confirmation: PropTypes.string, // arguments of your confirm function
   okText: PropTypes.string,
   cancelText: PropTypes.string,
-  okButtonStyle: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link']),
-  cancelButtonStyle: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link']),
+  okButtonStyle: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger',
+    'warning', 'info', 'light', 'dark', 'link']),
+  cancelButtonStyle: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger',
+    'warning', 'info', 'light', 'dark', 'link']),
   show: PropTypes.bool, // from confirmable.
   proceed: PropTypes.func, // from confirmable.
   cancel: PropTypes.func, // from confirmable.
@@ -107,7 +109,8 @@ Alert.propTypes = {
   title: PropTypes.string,
   confirmation: PropTypes.string, // arguments of your confirm function
   okText: PropTypes.string,
-  okButtonStyle: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link']),
+  okButtonStyle: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger',
+    'warning', 'info', 'light', 'dark', 'link']),
   show: PropTypes.bool, // from confirmable.
   proceed: PropTypes.func, // from confirmable.
   cancel: PropTypes.func, // from confirmable.
