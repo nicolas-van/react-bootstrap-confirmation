@@ -4,7 +4,7 @@ import {Modal, Button} from 'react-bootstrap';
 import {confirmable, createConfirmation} from 'react-confirm';
 
 const Confirmation = ({show, proceed, dismiss, cancel, confirmation, title,
-  okText, cancelText, okButtonStyle, ...options}) => {
+  okText, cancelText, okButtonStyle, cancelButtonStyle, ...options}) => {
   const header = title ? (
     <Modal.Header>
       <Modal.Title>{title}</Modal.Title>
@@ -21,7 +21,10 @@ const Confirmation = ({show, proceed, dismiss, cancel, confirmation, title,
       {header}
       <Modal.Body>{confirmation}</Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={() => proceed(false)}>
+        <Button 
+          variant={cancelButtonStyle}
+          onClick={() => proceed(false)}
+        >
           {cancelText}
         </Button>
         <Button
@@ -41,8 +44,8 @@ Confirmation.propTypes = {
   confirmation: PropTypes.string, // arguments of your confirm function
   okText: PropTypes.string,
   cancelText: PropTypes.string,
-  okButtonStyle: PropTypes.oneOf(['primary', 'success', 'danger', 'warning', 'info', 'default']),
-  cancelButtonStyle: PropTypes.oneOf(['primary', 'success', 'danger', 'warning', 'info', 'default']),
+  okButtonStyle: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link']),
+  cancelButtonStyle: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link']),
   show: PropTypes.bool, // from confirmable.
   proceed: PropTypes.func, // from confirmable.
   cancel: PropTypes.func, // from confirmable.
@@ -104,7 +107,7 @@ Alert.propTypes = {
   title: PropTypes.string,
   confirmation: PropTypes.string, // arguments of your confirm function
   okText: PropTypes.string,
-  okButtonStyle: PropTypes.oneOf(['primary', 'success', 'danger', 'warning', 'info', 'default']),
+  okButtonStyle: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link']),
   show: PropTypes.bool, // from confirmable.
   proceed: PropTypes.func, // from confirmable.
   cancel: PropTypes.func, // from confirmable.
