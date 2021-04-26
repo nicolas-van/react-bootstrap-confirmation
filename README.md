@@ -64,7 +64,7 @@ import {confirm} from 'react-bootstrap-confirmation';
 
 const ConfirmButton = () => {
   const display = async () => {
-    const result = await alert('Are you really sure?');
+    const result = await confirm('Are you really sure?');
     console.log('True if confirmed, false otherwise:', result);
   };
   return (
