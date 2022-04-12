@@ -67,9 +67,9 @@ Confirmation.defaultProps = {
   dismiss: undefined,
 };
 
-const confirmLow = createConfirmation(confirmable(Confirmation));
+export const confirm = (message, options = {}, mountingNode = null) => {
+  const confirmLow = createConfirmation(confirmable(Confirmation), 1000, mountingNode);
 
-export const confirm = (message, options = {}) => {
   return confirmLow(Object.assign({confirmation: message}, options));
 };
 
@@ -128,8 +128,9 @@ Alert.defaultProps = {
   dismiss: undefined,
 };
 
-const alertLow = createConfirmation(confirmable(Alert));
 
-export const alert = (message, options = {}) => {
+export const alert = (message, options = {}, mountingNode = null) => {
+  const alertLow = createConfirmation(confirmable(Alert), 1000, mountingNode);
+
   return alertLow(Object.assign({confirmation: message}, options));
 };
