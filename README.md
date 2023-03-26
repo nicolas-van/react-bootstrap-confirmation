@@ -1,5 +1,8 @@
 # react-bootstrap-confirmation
 
+> This project is looking for maintainers. If you want to support this projet you can create an issue explaining your motivation to support it.
+> Please only apply if your are serious about maintaining a library project on Github.
+
 [![](https://github.com/nicolas-van/react-bootstrap-confirmation/workflows/Node%20CI/badge.svg)](https://github.com/nicolas-van/react-bootstrap-confirmation/actions) [![npm version](https://img.shields.io/npm/v/react-bootstrap-confirmation.svg)](https://www.npmjs.com/package/react-bootstrap-confirmation)
 
 A library to easily display alerts and confirmations using React and Bootstrap. With react-bootstrap-confirmation
